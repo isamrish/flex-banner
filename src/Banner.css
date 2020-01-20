@@ -1,0 +1,34 @@
+:root {
+  --timing: 1s;
+  --bannerHeight: -34px;
+}
+
+.bannerSlideDown {
+  animation: slideDown var(--timing);
+}
+
+@keyframes slideDown {
+  from {
+    top: var(--bannerHeight);
+    margin-top: var(--bannerHeight);
+  }
+  to {
+    top: 0px;
+    margin-top: 0px;
+  }
+}
+
+.bannerSlideUp {
+  animation: slideUp var(--timing);
+}
+
+@keyframes slideUp {
+  from {
+    top: 0px;
+    margin-top: 0px;
+  }
+  to {
+    top: var(--bannerHeight);
+    margin-top: var(--bannerHeight);
+  }
+}

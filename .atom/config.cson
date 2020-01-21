@@ -1,0 +1,7 @@
+"*":
+  core:
+    automaticallyUpdate: false
+  editor: {}
+  "prettier-atom":
+    formatOnSaveOptions:
+      enabled: true

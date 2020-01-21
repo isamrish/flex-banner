@@ -1,7 +1,7 @@
-import BannerComponent from "./";
+import BannerComponent from './'
 
-describe("BannerComponent", () => {
-  it("is truthy", () => {
-    expect(BannerComponent).toBeTruthy();
-  });
-});
+describe('BannerComponent', () => {
+  it('is truthy', () => {
+    expect(BannerComponent).toBeTruthy()
+  })
+})

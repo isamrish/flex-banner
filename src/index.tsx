@@ -20,7 +20,7 @@ export interface BannerConfig {
   isCross: boolean
 }
 
-export function BannerComponent ({
+export function FlexBanner ({
   title,
   link,
   timeForCookie,
@@ -31,11 +31,21 @@ export function BannerComponent ({
   slidingTime,
   center,
   isCross
-}: PropTypes.InferProps<typeof BannerComponent.propTypes>) {
+}: PropTypes.InferProps<typeof FlexBanner.propTypes>) {
+  if (title === undefined) {
+    throw new Error('banner title is required!!!')
+  }
+  if (delayTimeToShowBanner === undefined) {
+    throw new Error('delayTimeToShowBanner is required!!')
+  }
+  if (slidingTime === undefined) {
+    throw new Error('slidingTime is required!!')
+  }
   const banner = useRef<HTMLDivElement>(null!)
   const [isVisible, setVisibility] = useState(false)
   const [isSlide, setSlide] = useState(false)
   const [cookies, setCookie] = useCookies(['visitedBanner'])
+
   let age: number = 0
   if (typeof timeForCookie === 'number') {
     age = timeForCookie
@@ -133,7 +143,7 @@ export function BannerComponent ({
   }
   return <></>
 }
-BannerComponent.propTypes = {
+FlexBanner.propTypes = {
   title: PropTypes.string.isRequired,
   link: PropTypes.shape({
     title: PropTypes.string,
@@ -148,4 +158,4 @@ BannerComponent.propTypes = {
   center: PropTypes.bool,
   isCross: PropTypes.bool
 }
-export default BannerComponent
+export default FlexBanner

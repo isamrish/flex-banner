@@ -1,13 +1,13 @@
 import React from "react";
-import BannerComponent from "flex-banner";
+import FlexBanner from "flex-banner";
 const App = () => {
   return (
     <div>
-      <BannerComponent
-        title="Title of banner"
+      <FlexBanner
+        title="title of the banner"
         link={{
-          title: "Google",
-          url: "https://google.com"
+          title: "example",
+          url: "https://example.com"
         }}
         delayTimeToShowBanner={1}
         slidingTime={1}

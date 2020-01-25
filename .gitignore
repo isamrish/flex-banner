@@ -2,3 +2,4 @@ node_modules/
 dist/
 *-error.log
 example/node_modules/
+package-lock.json

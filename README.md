@@ -1,8 +1,17 @@
-# flex-banner
+<div align="center">
+  <img src="./media/flex-banner.svg" alt="flex-banner" />
+</div>
 
-> Fully responsive react banner for websites
+<br />
 
+<div align="center">
+  Fully responsive react banner for websites. It is useful when you want to show important message to your website visitors such as product updates announcement, upcoming event announcement etc.
+</div>
+
+<br />
+<div align="center">
 [![NPM](https://img.shields.io/npm/v/flex-banner.svg)](https://www.npmjs.com/package/flex-banner) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com) [![Build Status](https://travis-ci.com/IsAmrish/flex-banner.svg?branch=master)](https://travis-ci.com/IsAmrish/flex-banner)
+</div>
 
 ## Install
 

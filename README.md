@@ -23,11 +23,9 @@
 
 <br />
 
-<div align="center" background="red">
 <p align="center">
   <img src="./media/flex-banner.gif" alt="flexBanner example video">
 </p>
-</div>
 
 ## Install
 
@@ -61,6 +59,12 @@ class Example extends React.Component {
   }
 }
 ```
+
+### FlexBanner in Mobile View
+
+<p align="center">
+  <img src="./media/flex-banner-mobile.gif" alt="flexBanner example video">
+</p>
 
 ## License
 

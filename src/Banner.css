@@ -4,6 +4,10 @@
 }
 
 .bannerSlideDown {
+  -webkit-animation: slideDown var(--timing); /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: slideDown var(--timing); /* Firefox < 16 */
+  -ms-animation: slideDown var(--timing); /* IE */
+  -o-animation: slideDown var(--timing); /* Opera < 12.1 */
   animation: slideDown var(--timing);
 }
 
@@ -18,11 +22,111 @@
   }
 }
 
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes slideDown {
+  from {
+    top: var(--bannerHeight);
+    margin-top: var(--bannerHeight);
+  }
+  to {
+    top: 0px;
+    margin-top: 0px;
+  }
+}
+
+/* IE */
+@-ms-keyframes slideDown {
+  from {
+    top: var(--bannerHeight);
+    margin-top: var(--bannerHeight);
+  }
+  to {
+    top: 0px;
+    margin-top: 0px;
+  }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes slideDown {
+  from {
+    top: var(--bannerHeight);
+    margin-top: var(--bannerHeight);
+  }
+  to {
+    top: 0px;
+    margin-top: 0px;
+  }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes slideDown {
+  from {
+    top: var(--bannerHeight);
+    margin-top: var(--bannerHeight);
+  }
+  to {
+    top: 0px;
+    margin-top: 0px;
+  }
+}
+
 .bannerSlideUp {
+  -webkit-animation: slideUp var(--timing); /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: slideUp var(--timing); /* Firefox < 16 */
+  -ms-animation: slideUp var(--timing); /* IE */
+  -o-animation: slideUp var(--timing); /* Opera < 12.1 */
   animation: slideUp var(--timing);
 }
 
 @keyframes slideUp {
+  from {
+    top: 0px;
+    margin-top: 0px;
+  }
+  to {
+    top: var(--bannerHeight);
+    margin-top: var(--bannerHeight);
+  }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes slideUp {
+  from {
+    top: 0px;
+    margin-top: 0px;
+  }
+  to {
+    top: var(--bannerHeight);
+    margin-top: var(--bannerHeight);
+  }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes slideUp {
+  from {
+    top: 0px;
+    margin-top: 0px;
+  }
+  to {
+    top: var(--bannerHeight);
+    margin-top: var(--bannerHeight);
+  }
+}
+
+/* IE */
+@-ms-keyframes slideUp {
+  from {
+    top: 0px;
+    margin-top: 0px;
+  }
+  to {
+    top: var(--bannerHeight);
+    margin-top: var(--bannerHeight);
+  }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes slideUp {
   from {
     top: 0px;
     margin-top: 0px;

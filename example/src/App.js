@@ -4,35 +4,15 @@ const App = () => {
   return (
     <div>
       <FlexBanner
-        title="title of the banner"
-        link={{
-          title: "example",
-          url: "https://example.com"
-        }}
-        delayTimeToShowBanner={1}
-        slidingTime={1}
-        center={true}
-        timeForCookie={false}
-        isCross={true}
-        wrapperStyle={{
-          backgroundColor: "blue",
-          paddingLeft: "24px",
-          paddingRight: "24px",
-          textAlign: "center"
-        }}
-        mainStyle={{
-          color: "white",
-          textAlign: "center",
-          margin: "10px"
-        }}
-        crossStyle={{
-          fontSize: "16px"
-        }}
+        title="Fully responsive react banner for websites"
+        ctaLink="https://github.com/IsAmrish/flex-banner"
+        ctaTitle="Learn More"
+        isCenter={true}
       />
       <div
-        style={{ height: "200px", padding: "30px", backgroundColor: "green" }}
+        style={{ height: "200px", padding: "30px", backgroundColor: "white" }}
       >
-        <h2 style={{ margin: "0px" }}>This is dummy image!!!</h2>
+        <h2 style={{ margin: "0px" }}>Welcome to FlexBanner PlayGround</h2>
       </div>
     </div>
   );

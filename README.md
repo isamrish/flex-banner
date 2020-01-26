@@ -39,30 +39,10 @@ class Example extends React.Component {
   render() {
     return (
       <FlexBanner
-        title="title of the banner" // string
-        link={{
-          title: "example",
-          url: "https://example.com"
-        }}
-        delayTimeToShowBanner={1}
-        slidingTime={1}
-        center={true}
-        timeForCookie={false}
-        isCross={true}
-        wrapperStyle={{
-          backgroundColor: "blue",
-          paddingLeft: "24px",
-          paddingRight: "24px",
-          textAlign: "center"
-        }}
-        mainStyle={{
-          color: "white",
-          textAlign: "center",
-          margin: "10px"
-        }}
-        crossStyle={{
-          fontSize: "16px"
-        }}
+        title="Fully responsive react banner for websites"
+        ctaLink="https://github.com/IsAmrish/flex-banner"
+        ctaTitle="Learn More"
+        isCenter={true}
       />
     );
   }

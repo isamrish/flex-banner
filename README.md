@@ -77,7 +77,7 @@ class Example extends React.Component {
 | mainStyleLink     | object  | no       |               | style object for styling of Call To Action link                                                                                                                                                                         |
 | crossStyle        | object  | no       |               | style object for styling cross Icon - such as color etc. **Note** - font size property will be set only by `crossIconSize` property.                                                                                    |
 
-### Responsive View of FlexBanner
+## Responsive View of FlexBanner
 
 <p align="center">
   <img src="./media/flex-banner-mobile.gif" alt="flexBanner example video">

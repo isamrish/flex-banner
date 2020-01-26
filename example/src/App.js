@@ -8,9 +8,10 @@ const App = () => {
         ctaLink="https://github.com/IsAmrish/flex-banner"
         ctaTitle="Learn More"
         isCenter={true}
+        delayToShowBanner={10}
       />
       <div
-        style={{ height: "200px", padding: "30px", backgroundColor: "white" }}
+        style={{ height: "500px", padding: "30px", backgroundColor: "#54AB6A" }}
       >
         <h2 style={{ margin: "0px" }}>Welcome to FlexBanner PlayGround</h2>
       </div>

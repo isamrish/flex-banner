@@ -23,9 +23,12 @@
 
 <br />
 
+<div align="center" background="red">
 <p align="center">
-  <img src="./media/flexBanner.gif" alt="flexBanner example video">
+  <img src="./media/flex-banner.gif" alt="flexBanner example video">
 </p>
+</div>
+
 ## Install
 
 ```bash

@@ -3,6 +3,7 @@ import FlexBanner from "flex-banner";
 const App = () => {
   return (
     <div>
+
       <FlexBanner
         title="Fully responsive react banner for websites"
         ctaLink="https://github.com/IsAmrish/flex-banner"

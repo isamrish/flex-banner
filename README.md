@@ -16,6 +16,16 @@
 
 </div>
 
+<div align="center">
+  <sub>A small react component `FlexBanner` to help you . Built with ❤︎ by
+  <a href="https://github.com/isamrish">Amrish Kushwaha</a>
+</div>
+
+<br />
+
+<p align="center">
+  <img src="./media/flexBanner.gif" alt="flexBanner example video">
+</p>
 ## Install
 
 ```bash

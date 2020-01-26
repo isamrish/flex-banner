@@ -79,6 +79,8 @@ class Example extends React.Component {
 
 ## Responsive View of FlexBanner
 
+The banner will be shown top regardless of screen.
+
 <p align="center">
   <img src="./media/flex-banner-mobile.gif" alt="flexBanner example video">
 </p>

@@ -60,6 +60,65 @@ class Example extends React.Component {
 }
 ```
 
+### Usage with Optional Properties
+
+This example includes optional property in the component:
+
+**ctaTitle** - Title of Call To Action (CTA).
+
+**isCenter** - To make banner title and link center aligned.
+
+**crossIconSize** - To define, font size of cross Icons.
+
+**animationTime** - To define, sliding { SlideDown and SlideUp } time of banner.
+
+**delayToShowBanner** - Delay in showing up banner.
+
+**daysToLive** - No of days cookie will live before banner is shown up.
+
+**wrapperStyle** - style object for styling of the wrapper
+
+**mainStyleTitle** - style object for styling of the title of banner. If `ctaTitle` property is not defined, then this will defined the styling of link.
+
+**mainStyleLink** - style object for styling of the CTA of banner.
+
+**crossStyle** - style object for styling of the crossIcon. The font size of cross icon can only be defined by `crossIconSize` property.
+
+```tsx
+import * as React from "react";
+
+import FlexBanner from "flex-banner";
+
+class Example extends React.Component {
+  render() {
+    return (
+      <FlexBanner
+        title="Fully responsive react banner for websites"
+        ctaLink="https://github.com/IsAmrish/flex-banner"
+        ctaTitle="Learn More"
+        isCenter={false}
+        crossIconSize={24}
+        animationTime={1.5}
+        delayToShowBanner={0}
+        daysToLive={5}
+        wrapperStyle={{ backgroundColor: "lightblue" }}
+        mainStyleTitle={{ color: "black" }}
+        mainStyleLink={{ color: "red" }}
+        crossStyle={{ color: "red" }}
+      />
+    );
+  }
+}
+```
+
+#### Results
+
+<p align="center">
+  <img src="./media/flex-banner-optional-values.png" alt="flex-banner optional values" />
+</p>
+
+---
+
 ## Properties
 
 | Property          | Type    | Required | Default value | Description                                                                                                                                                                                                             |

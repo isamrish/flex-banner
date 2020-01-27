@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./media/flex-banner.svg" alt="flex-banner" />
+  <img src="./media/flex-banner.png" alt="flex-banner" />
 </div>
 
 <br />

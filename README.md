@@ -84,6 +84,8 @@ This example includes optional property in the component:
 
 **crossStyle** - style object for styling of the crossIcon. The font size of cross icon can only be defined by `crossIconSize` property.
 
+**hidePermanentlyOnDate** - To hide banner permanently on a specific date / datetime
+
 ## Properties
 
 | Property          | Type    | Required | Default value | Description                                                                                                                                                                                                             |
@@ -100,6 +102,8 @@ This example includes optional property in the component:
 | mainStyleTitle    | object  | no       |               | style object for styling of title                                                                                                                                                                                       |
 | mainStyleLink     | object  | no       |               | style object for styling of Call To Action link                                                                                                                                                                         |
 | crossStyle        | object  | no       |               | style object for styling cross Icon - such as color etc. **Note** - font size property will be set only by `crossIconSize` property.                                                                                    |
+
+| hidePermanentlyOnDate        | Date  | no       |               | To hide banner permanently on a specific date / datetime property.                                                                                    |
 
 ### Example with CTA title
 

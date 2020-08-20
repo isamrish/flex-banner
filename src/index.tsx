@@ -4,6 +4,8 @@ import { FiX } from 'react-icons/fi'
 import styles from './Banner.css'
 import PropTypes from 'prop-types'
 
+import { isShowingBannerPeriodOver } from './utils/is-showing-banner-period-over'
+
 export function FlexBanner ({
   title,
   ctaLink,
@@ -16,7 +18,8 @@ export function FlexBanner ({
   wrapperStyle,
   mainStyleTitle,
   mainStyleLink,
-  crossStyle
+  crossStyle,
+  hidePermanentlyAfterDate
 }: PropTypes.InferProps<typeof FlexBanner.propTypes>) {
   if (title === undefined) {
     throw new Error('title is required!!!')
@@ -28,6 +31,7 @@ export function FlexBanner ({
   const [isVisible, setVisibility] = useState(false)
   const [isSlide, setSlide] = useState(false)
   const [cookies, setCookie] = useCookies(['visitedBanner'])
+
   const handleClick = () => {
     setSlide(true)
     setTimeout(() => {
@@ -44,11 +48,22 @@ export function FlexBanner ({
       )
     }
 
-    if (!daysToLive) {
+    if (!daysToLive && hidePermanentlyAfterDate instanceof Date) {
+      setTimeout(() => {
+        setVisibility(!isShowingBannerPeriodOver(hidePermanentlyAfterDate))
+      }, delayToShowBanner * 2000)
+    }
+
+    if (
+      !daysToLive &&
+      (!(hidePermanentlyAfterDate instanceof Date) ||
+        hidePermanentlyAfterDate === undefined)
+    ) {
       setTimeout(() => {
         setVisibility(true)
       }, delayToShowBanner * 1000)
     }
+
     if (cookies.visitedBanner === undefined && daysToLive) {
       setTimeout(() => {
         setVisibility(true)
@@ -57,6 +72,12 @@ export function FlexBanner ({
         })
       }, delayToShowBanner * 1000)
     }
+
+    if (hidePermanentlyAfterDate instanceof Date) {
+      setTimeout(() => {
+        setVisibility(!isShowingBannerPeriodOver(hidePermanentlyAfterDate))
+      }, delayToShowBanner * 2000)
+    }
   }, [
     isVisible,
     setCookie,
@@ -64,8 +85,10 @@ export function FlexBanner ({
     daysToLive,
     animationTime,
     banner,
-    delayToShowBanner
+    delayToShowBanner,
+    hidePermanentlyAfterDate
   ])
+
   if (isVisible) {
     return (
       <div
@@ -128,7 +151,7 @@ export function FlexBanner ({
       </div>
     )
   }
-  return <></>
+  return <React.Fragment></React.Fragment>
 }
 FlexBanner.propTypes = {
   title: PropTypes.string.isRequired,
@@ -142,7 +165,8 @@ FlexBanner.propTypes = {
   wrapperStyle: PropTypes.object,
   mainStyleTitle: PropTypes.object,
   mainStyleLink: PropTypes.object,
-  crossStyle: PropTypes.object
+  crossStyle: PropTypes.object,
+  hidePermanentlyAfterDate: PropTypes.instanceOf(Date)
 }
 
 FlexBanner.defaultProps = {

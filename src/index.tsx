@@ -19,7 +19,7 @@ export function FlexBanner ({
   mainStyleTitle,
   mainStyleLink,
   crossStyle,
-  hidePermanentlyAfterDate
+  hidePermanentlyOnDate
 }: PropTypes.InferProps<typeof FlexBanner.propTypes>) {
   if (title === undefined) {
     throw new Error('title is required!!!')
@@ -48,16 +48,16 @@ export function FlexBanner ({
       )
     }
 
-    if (!daysToLive && hidePermanentlyAfterDate instanceof Date) {
+    if (!daysToLive && hidePermanentlyOnDate instanceof Date) {
       setTimeout(() => {
-        setVisibility(!isShowingBannerPeriodOver(hidePermanentlyAfterDate))
+        setVisibility(!isShowingBannerPeriodOver(hidePermanentlyOnDate))
       }, delayToShowBanner * 2000)
     }
 
     if (
       !daysToLive &&
-      (!(hidePermanentlyAfterDate instanceof Date) ||
-        hidePermanentlyAfterDate === undefined)
+      (!(hidePermanentlyOnDate instanceof Date) ||
+        hidePermanentlyOnDate === undefined)
     ) {
       setTimeout(() => {
         setVisibility(true)
@@ -73,9 +73,9 @@ export function FlexBanner ({
       }, delayToShowBanner * 1000)
     }
 
-    if (hidePermanentlyAfterDate instanceof Date) {
+    if (hidePermanentlyOnDate instanceof Date) {
       setTimeout(() => {
-        setVisibility(!isShowingBannerPeriodOver(hidePermanentlyAfterDate))
+        setVisibility(!isShowingBannerPeriodOver(hidePermanentlyOnDate))
       }, delayToShowBanner * 2000)
     }
   }, [
@@ -86,7 +86,7 @@ export function FlexBanner ({
     animationTime,
     banner,
     delayToShowBanner,
-    hidePermanentlyAfterDate
+    hidePermanentlyOnDate
   ])
 
   if (isVisible) {
@@ -166,7 +166,7 @@ FlexBanner.propTypes = {
   mainStyleTitle: PropTypes.object,
   mainStyleLink: PropTypes.object,
   crossStyle: PropTypes.object,
-  hidePermanentlyAfterDate: PropTypes.instanceOf(Date)
+  hidePermanentlyOnDate: PropTypes.instanceOf(Date)
 }
 
 FlexBanner.defaultProps = {
